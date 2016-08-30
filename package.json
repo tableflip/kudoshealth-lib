@@ -2,6 +2,7 @@
   "name": "kudoshealth-lib",
   "version": "1.0.0",
   "description": "Library functions for KudosHealth API and data project",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/tableflip/kudoshealth-lib/issues"
   },
-  "homepage": "https://github.com/tableflip/kudoshealth-lib#readme"
+  "homepage": "https://github.com/tableflip/kudoshealth-lib#readme",
+  "dependencies": {
+    "async": "^2.0.1",
+    "moment": "^2.14.1"
+  }
 }
