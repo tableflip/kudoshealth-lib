@@ -1,0 +1,19 @@
+{
+  "name": "kudoshealth-lib",
+  "version": "1.0.0",
+  "description": "Library functions for KudosHealth API and data project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tableflip/kudoshealth-lib.git"
+  },
+  "author": "TABLEFLIP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tableflip/kudoshealth-lib/issues"
+  },
+  "homepage": "https://github.com/tableflip/kudoshealth-lib#readme"
+}
