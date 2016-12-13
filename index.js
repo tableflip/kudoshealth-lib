@@ -5,6 +5,7 @@ const leagueRankings = require('./lib/league-rankings')
 const teamRankings = require('./lib/team-rankings')
 const memberRankings = require('./lib/member-rankings')
 const promote = require('./lib/promote')
+const createAuth0Api = require('./lib/auth0-api')
 
 module.exports = {
   calories,
@@ -13,5 +14,6 @@ module.exports = {
   leagueRankings,
   teamRankings,
   memberRankings,
-  promote
+  promote,
+  createAuth0Api
 }
