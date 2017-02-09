@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard && NODE_ENV=test istanbul cover tape tests/*.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,14 @@
   "dependencies": {
     "async": "^2.0.1",
     "moment": "^2.14.1"
+  },
+  "devDependencies": {
+    "config": "^1.25.1",
+    "faker": "^3.1.0",
+    "faucet": "0.0.1",
+    "istanbul": "^0.4.5",
+    "mongojs": "^2.4.0",
+    "standard": "^9.0.0-beta.0",
+    "tape": "^4.6.3"
   }
 }
