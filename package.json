@@ -27,6 +27,7 @@
     "faucet": "0.0.1",
     "istanbul": "^0.4.5",
     "mongojs": "^2.4.0",
+    "pre-commit": "^1.2.2",
     "standard": "^9.0.0-beta.0",
     "tape": "^4.6.3"
   }
