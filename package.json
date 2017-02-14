@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "standard && NODE_ENV=test istanbul cover tape tests/*.js"
+    "test": "standard && NODE_ENV=test istanbul cover tape tests/*.js | faucet"
   },
   "repository": {
     "type": "git",

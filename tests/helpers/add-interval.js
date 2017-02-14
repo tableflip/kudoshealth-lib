@@ -2,7 +2,7 @@ const Faker = require('faker')
 const moment = require('moment')
 const ObjectId = require('mongojs').ObjectId
 
-/* Add a user to the DB and hand it back in the callback */
+/* Add an interval to the DB and hand it back in the callback */
 module.exports = (db, data, cb) => {
   if (!cb) {
     cb = data
@@ -29,9 +29,5 @@ module.exports = (db, data, cb) => {
     calories: Math.random() * 60
   }, data)
 
-  db.intervals.insert(interval, (err, interval) => {
-    if (err) return cb(err)
-    // Stuff the password on the user for testings,
-    cb(err, interval)
-  })
+  db.intervals.insert(interval, cb)
 }
