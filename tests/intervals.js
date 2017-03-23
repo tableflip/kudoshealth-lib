@@ -16,6 +16,16 @@ test('Should calculate intervals', (t) => {
       endDate: moment(start).add(20, 'minutes').valueOf(),
       calsPerMilli: 0.02,
       type: 'Run'
+    },
+    {
+      startDate: moment(start).add(30, 'minutes').valueOf(),
+      endDate: moment(start).add(35, 'minutes').valueOf(),
+      calsPerMilli: 0.03
+    },
+    {
+      startDate: moment(start).add(35, 'minutes').valueOf(),
+      endDate: moment(start).add(40, 'minutes').valueOf(),
+      calsPerMilli: 0.04
     }
   ]
   const startDate = start.valueOf()
@@ -25,7 +35,7 @@ test('Should calculate intervals', (t) => {
   // DO IT!
   const intervals = calcIntervals({startDate, endDate, activities, intervalSize})
 
-  t.equal(intervals.length, 2, 'Found 2 intervals with activity')
+  t.equal(intervals.length, 3, 'Found 3 intervals with activity')
   t.equal(intervals[0].startDate, startDate, 'interval times as expected')
   t.equal(intervals[0].endDate, moment(startDate).add(intervalSize, 'ms').valueOf(), 'interval times as expected')
   t.equal(intervals[1].startDate, moment(startDate).add(intervalSize, 'ms').valueOf(), 'interval times as expected')
@@ -34,5 +44,6 @@ test('Should calculate intervals', (t) => {
   t.equal(intervals[1].calories, (1000 * 60 * 0.01) + (1000 * 60 * 5 * 0.02), 'Calories calc as expected')
   t.deepEqual(intervals[0].types, ['Cycling'], 'Activity names are normalised')
   t.deepEqual(intervals[1].types, ['Running', 'Cycling'], 'Activity names are ordered by duration')
+  t.deepEqual(intervals[2].types, ['Activity'], 'Activity name is defaulted and de-duped')
   t.end()
 })
