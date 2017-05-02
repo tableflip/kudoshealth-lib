@@ -37,8 +37,7 @@ test('Team rankings should count the correct number of intervals since the final
       })
     },
     function addTeam ({ intervals, users }, cb) {
-      db.groups.insert({
-        __t: 'Team',
+      db.teams.insert({
         name: Faker.company.companyName(),
         deleted: false,
         members: users.map((u, ind) => ({
@@ -53,16 +52,14 @@ test('Team rankings should count the correct number of intervals since the final
       })
     },
     function addPanel ({ intervals, users, team }, cb) {
-      db.groups.insert({
-        __t: 'Panel',
+      db.panels.insert({
         name: Faker.commerce.productMaterial(),
         deleted: false,
         team: [{ teamId: team._id }]
       }, (err, panel) => cb(err, { intervals, users, team, panel }))
     },
     function addLeague ({ intervals, users, team, panel }, cb) {
-      db.groups.insert({
-        __t: 'League',
+      db.leagues.insert({
         name: Faker.name.jobArea(),
         deleted: false,
         teamSize: 10,
