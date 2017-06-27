@@ -1,6 +1,6 @@
 {
   "name": "kudoshealth-lib",
-  "version": "3.2.0",
+  "version": "4.0.0",
   "description": "Library functions for KudosHealth API and data project",
   "private": true,
   "main": "index.js",
