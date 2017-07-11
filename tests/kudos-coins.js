@@ -24,5 +24,7 @@ test('KudosCoins function', (t) => {
   testSet.forEach(({ kudosPoints, kudosCoins }) => {
     t.equals(calcKudosCoins(kudosPoints), kudosCoins, 'Calculated number of KudosCoins should be correct')
   })
+  t.throws(() => calcKudosCoins('foobar'), 'KudosCoins calculation throws with string argument')
+  t.throws(() => calcKudosCoins(), 'KudosCoins calculation throws with no argument')
   t.end()
 })
